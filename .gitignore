@@ -1,3 +1,4 @@
 
 #Directory
 websiteapp/server/.flaskenv
+websiteapp/server/.env

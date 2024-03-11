@@ -1,6 +1,9 @@
 from flask import Flask
 from flask_smorest import Api
 from dotenv import load_dotenv
+import redis
+from rq import Queue
+import os
 
 from flow.entityproduct import blp as ProductBluePrint
 from flow.entityuser import blp as UserBluePrint
@@ -8,6 +11,10 @@ from flow.entityuser import blp as UserBluePrint
 def create_app():
     app = Flask(__name__)
     load_dotenv()
+    connection = redis.from_url(
+        os.getenv("REDIS_URL")
+    )
+    app.queue = Queue("webinfo",connection=connection)
     app.config["API_TITLE"] = "ECommerce Website"
     app.config["API_VERSION"] = "v1"
     app.config["OPENAPI_VERSION"] = "3.0.3"
