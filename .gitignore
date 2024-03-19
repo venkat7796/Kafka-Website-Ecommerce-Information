@@ -4,4 +4,3 @@ websiteapp/server/.flaskenv
 websiteapp/server/.env
 websiteapp/server/kafkaConsumer/.env
 websiteapp/server/kafkaProducer/.env
-websiteapp/server/kafka-ec2-key-pair-v9.pem

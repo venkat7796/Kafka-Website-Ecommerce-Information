@@ -1,7 +1,6 @@
 from dotenv import load_dotenv
 from kafka import KafkaProducer
 import json
-from json import dumps
 import os
 
 
