@@ -2,3 +2,6 @@
 #Directory
 websiteapp/server/.flaskenv
 websiteapp/server/.env
+websiteapp/server/kafkaConsumer/.env
+websiteapp/server/kafkaProducer/.env
+websiteapp/server/kafka-key-pair-v1.pem
