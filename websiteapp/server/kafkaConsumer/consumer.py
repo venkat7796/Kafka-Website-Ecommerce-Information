@@ -35,7 +35,7 @@ def consume_messages_kafka():
 
     productInfo = KafkaConsumer(
         'ecommerce_products',
-        bootstrap_servers=['18.209.22.67:9092'],
+        bootstrap_servers=[aws_ec2],
         value_deserializer=lambda x: loads(x.decode('utf-8'))
     )
 
